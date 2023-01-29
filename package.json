@@ -1,0 +1,23 @@
+{
+    "private": true,
+    "scripts": {
+        "local": "npx nuxi dev --https --ssl-cert ../keys/192.168.17.63.pem --ssl-key ../keys/192.168.17.63-key.pem",
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "clean": "npm cache clean --force",
+        "start": "node .output/server/index.mjs"
+    },
+    "devDependencies": {
+        "nuxt": "^3.1.0"
+    },
+    "dependencies": {
+        "@mdi/font": "^7.1.96",
+        "sass": "^1.57.1",
+        "socket.io": "4.5.2",
+        "socket.io-client": "4.5.2",
+        "vuetify": "3.1.2"
+    }
+}
