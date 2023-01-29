@@ -7,7 +7,7 @@ export default (_: any, nuxt: any) => {
           origin: "*",
           methods: ["GET", "POST"]
         }})
-        io.listen(3001)
+        io.listen(8080)
 
         nuxt.hook('close', () => io.close())
         
