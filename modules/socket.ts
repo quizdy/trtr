@@ -8,7 +8,9 @@ export default (_: any, nuxt: any) => {
         //   methods: ["GET", "POST"]
         // }})
         // io.listen(8080)
-        const io = new Server(server)
+        const io = new Server(server, {
+          path: '/socket.io/'
+        })
         
         nuxt.hook('close', () => io.close())
         
