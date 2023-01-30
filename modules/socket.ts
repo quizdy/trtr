@@ -9,7 +9,9 @@ export default (_: any, nuxt: any) => {
         // }})
         // io.listen(8080)
         const io = new Server(server, {
-          path: '/socket.io/'
+          allowRequest: (_req, callback) => {
+            callback(null, false);
+          }
         })
         
         nuxt.hook('close', () => io.close())
